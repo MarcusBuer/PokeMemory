@@ -32,7 +32,6 @@ const CardStyled = styled.button`
   border: 0;
   perspective: 1000px;
   background: transparent;
-  perspective: 100px;
   cursor: pointer;
 
   img {

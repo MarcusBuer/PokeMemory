@@ -11,9 +11,9 @@ function Home() {
       <h1>PokeMemory</h1>
       <p>Choose the difficulty to start a game</p>
       <div>
-        <DifficultyButton difficulty={4}>Easy</DifficultyButton>
-        <DifficultyButton difficulty={6}>Medium</DifficultyButton>
-        <DifficultyButton difficulty={8}>Hard</DifficultyButton>
+        <DifficultyButton difficulty={2}>Easy</DifficultyButton>
+        <DifficultyButton difficulty={4}>Medium</DifficultyButton>
+        <DifficultyButton difficulty={6}>Hard</DifficultyButton>
       </div>
       <CardGrid />
       <p>Turns: {turns}</p>
