@@ -8,18 +8,19 @@ const DifficultyButton = ({children, difficulty}) => {
 }
 
 const ButtonStyled = styled.button`
-  margin: 1rem 0.5rem;
-  padding: 1rem;
+  margin: .5rem 0.5rem;
+  padding: .5rem;
   background-color: #f5f5f5;
   border-radius: 0.5rem;
   border: 1px solid #f5f5f5;
-  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+  border: 4px dashed transparent;
 
   &:hover {
     border: 1px solid #ddd;
-    background-color: #ddd;
+    background-color: #ddd7;
+    border: 4px dashed #333;
   }
 `
 

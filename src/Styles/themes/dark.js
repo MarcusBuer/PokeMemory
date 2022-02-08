@@ -1,5 +1,5 @@
 const Dark = {
-  title: 'dark',
+  title: 'light',
   colors: {
     primary: '#320E3B',
     secondary: '#CC59D2',
@@ -7,8 +7,8 @@ const Dark = {
     quaternary: '#DF2935',
     quinary: '#585B56',
 
-    background: '#333',
-    text: '#eee',
+    background: '#eee',
+    text: '#333',
 
     navbar: {
       download: '#F5F5F5',

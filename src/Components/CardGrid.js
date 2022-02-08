@@ -25,5 +25,4 @@ const CardGridStyled = styled.div`
   margin: 0 auto;
   gap: 4px;
   grid-template-columns: repeat(var(--difficulty), minmax(auto, 35px));
-  
 `
