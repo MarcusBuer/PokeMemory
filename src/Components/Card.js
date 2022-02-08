@@ -5,7 +5,7 @@ export default function Card({ card, handleChoice, flipped, canPlay }) {
       disabled={flipped || !canPlay}
       onClick={() => handleChoice(card)}
     >
-      <div className={`flipper ${flipped === true ? `flipped` : ``}`}>
+      <div className={`flipper ${flipped === true ? `flipped` : `notFlipped`}`}>
         <div className='front'>
           <img src={card.url} alt='card back' />
         </div>

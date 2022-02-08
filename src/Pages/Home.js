@@ -94,7 +94,10 @@ const HomeStyled = styled.div`
         position: relative;
         width: 100%;
         height: 100%;
-        transition: transform 0.25s ease-in-out;
+        transition: transform 0.25s ease-in-out 0s;
+        .flipper.active {
+          transition-delay: 1s;
+        }
         transform-style: preserve-3d;
         .front {
           transform: rotateY(180deg);
@@ -110,6 +113,11 @@ const HomeStyled = styled.div`
 
       .flipped {
         transform: rotateY(180deg);
+        border: 2px dashed #ddd;
+      }
+      .notFlipped {
+        transition: transform 0.25s ease-in-out 1s;
+        transform: rotateY(0deg);
         border: 2px dashed #ddd;
       }
     }

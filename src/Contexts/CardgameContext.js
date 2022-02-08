@@ -12,7 +12,9 @@ export function CardgameProvider({ children }) {
   const [matched, setMatched] = useState(0)
 
   function handleChoice(card) {
-    choise1 ? setChoise2(card) : setChoise1(card)
+    if (canPlay) {
+      choise1 ? setChoise2(card) : setChoise1(card)
+    }
   }
 
   function resetTurn() {
@@ -25,9 +27,11 @@ export function CardgameProvider({ children }) {
     if (choise1 && choise2) {
       setCanPlay(false)
       if (choise1.id === choise2.id) {
+        const [newC1] = [choise1]
+        resetTurn()
         setCards(
           cards.map(card => {
-            if (card.id === choise1.id) {
+            if (card.id === newC1.id) {
               return { ...card, matched: true }
             }
             return card
@@ -35,9 +39,9 @@ export function CardgameProvider({ children }) {
         )
         setMatched(matched + 2)
       } else {
-        setTimeout(() => resetTurn(), 800)
+        setTimeout(() => resetTurn(), 250)
       }
-      setTimeout(() => setCanPlay(true), 1300)
+      setTimeout(() => setCanPlay(true), 1250)
     }
   }, [choise1, choise2])
 
@@ -116,6 +120,6 @@ export function useCardgame() {
   if (context === undefined) {
     throw new Error('Context was used outside of its Provider')
   }
-  
+
   return context
 }
